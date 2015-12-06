@@ -7,38 +7,40 @@ This application use HAP-NodeJS (https://github.com/KhaosT/HAP-NodeJS) to create
 Installation 
 === 
 VeraLink requires the following libraries and applications to run: 
-- `nodejs` 
-- `npm` 
-- `git-core` 
-- `libnss-mdns` 
-- `libavahi-compat-libdnssd-dev` 
+- **nodejs**
+- **npm**
+- **git-core**
+- **libnss-mdns**
+- **libavahi-compat-libdnssd-dev**
  
-In Ubuntu/Debian system you can install the requirements with the following: 
+In Ubuntu/Debian system you can install the requirements with the following:
+
 `sudo apt-get update`
  
-```sudo apt-get install nodejs npm git-core libnss-mdns libavahi-compat-libdnssd-dev`
+`sudo apt-get install nodejs npm git-core libnss-mdns libavahi-compat-libdnssd-dev`
  
 `sudo npm config set registry http://registry.npmjs.org/ `
  
 `sudo npm install -g node-gyp`
  
-Once all the libraries are set, you can download the actual program with: 
+Once all the libraries are set, you can download the actual program with:
+
 `git clone https://github.com/damianxd/VeraLink`
  
-Next you need to get all the node dependencies with: 
+Next you need to get all the node dependencies with:
+
 `cd Veralink` 
  
 `npm install`
  
-Edit your `config.js` file with your own configuration, at first try just set the VeraIP and then go for the rest of the settings 
+Edit your **config.js** file with your own configuration, at first try just set the VeraIP and then go for the rest of the settings 
  
 Finally, you can start the app with this command: 
-```node VeraLink.js 
-``` 
+`node VeraLink.js`
  
 Run it on the background 
 === 
-If you want to use it as a service, you can run it with `forever` 
+If you want to use it as a service, you can run it with **forever**
 `https://github.com/foreverjs/forever`
  
 Debug 
@@ -55,7 +57,7 @@ Known issues
 === 
 - Currently dimmer lights are not working with this version of the app because I don't have one to test, I will be releasing a new version with it shortly, but it will be untested. 
 - You can change the password on the config.js file, but you can't use simple passwords like 111-11-1111 or 123-45-678 
-- Sometimes it takes a long time to load the prompt that ask for the password of the device, please DON'T close the device adding screen during that time or the device will no longer work, to reset all, just change the `cardinality` setting on the `config.js` file. 
+- Sometimes it takes a long time to load the prompt that ask for the password of the device, please DON'T close the device adding screen during that time or the device will no longer work, to reset all, just change the **cardinality** setting on the **config.js** file. 
 - A lot of other bug may happen, so please try to debug the application and post your log on the [issues tab](https://github.com/damianxd/VeraLink/issues) 
  
 Donations 
