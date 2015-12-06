@@ -14,28 +14,21 @@ VeraLink requires the following libraries and applications to run:
 - `libavahi-compat-libdnssd-dev` 
  
 In Ubuntu/Debian system you can install the requirements with the following: 
-```sudo apt-get update 
-``` 
+`sudo apt-get update`
  
-```sudo apt-get install nodejs npm git-core libnss-mdns libavahi-compat-libdnssd-dev 
-``` 
+```sudo apt-get install nodejs npm git-core libnss-mdns libavahi-compat-libdnssd-dev`
  
-```sudo npm config set registry http://registry.npmjs.org/ 
-``` 
+`sudo npm config set registry http://registry.npmjs.org/ `
  
-```sudo npm install -g node-gyp 
-``` 
+`sudo npm install -g node-gyp`
  
 Once all the libraries are set, you can download the actual program with: 
-```git clone https://github.com/damianxd/VeraLink 
-``` 
+`git clone https://github.com/damianxd/VeraLink`
  
 Next you need to get all the node dependencies with: 
-```cd Veralink 
-``` 
+`cd Veralink` 
  
-```npm install 
-``` 
+`npm install`
  
 Edit your `config.js` file with your own configuration, at first try just set the VeraIP and then go for the rest of the settings 
  
@@ -46,14 +39,13 @@ Finally, you can start the app with this command:
 Run it on the background 
 === 
 If you want to use it as a service, you can run it with `forever` 
-```https://github.com/foreverjs/forever``` 
+`https://github.com/foreverjs/forever`
  
 Debug 
 === 
 VeraLink and The HAP-NodeJS library support the debug library for log output. You can print some or all logs by setting the DEBUG environment variable. 
 For instance, to see all debug logs while running the server: 
-```DEBUG=* node BridgedCore.js 
-``` 
+`DEBUG=* node BridgedCore.js`
  
 Debug 
 === 
