@@ -51,7 +51,7 @@ For instance, to see all debug logs while running the server:
  
 Debug 
 === 
-Special thanks to Albeebe for all his work and his original idea to get Vera to work with HAP and [Alex Skalozub](https://twitter.com/pieceofsummer) who reverse engineered the server side HAP. 
+Special thanks to Albeebe for all his work and his original idea to get Vera to work with HAP, [Alex Skalozub](https://twitter.com/pieceofsummer) who reverse engineered the server side HAP and the biggest of thanks to [Khaos Tian](http://tz.is) who made the awesome HAP-NodeJS implementation.
  
 Known issues 
 === 
