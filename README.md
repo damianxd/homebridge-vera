@@ -35,7 +35,8 @@ Next you need to get all the node dependencies with:
  
 Edit your **config.js** file with your own configuration, at first try just set the VeraIP and then go for the rest of the settings 
  
-Finally, you can start the app with this command: 
+Finally, you can start the app with this command:
+ 
 `node VeraLink.js`
  
 Run it on the background 
