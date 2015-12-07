@@ -47,7 +47,7 @@ If you want to use it as a service, you can run it with **forever**
 Options
 ===
 You can change all the current options on the **config.js** file and it include:
-- VeraIP: The current Vera IP for your Vera device
+- veraIP: The current Vera IP for your Vera device
 - happort: The starting port of HAP, the program will increase this number for each device to make each individual server
 - cardinality: This variable is to change all the names of the devices at the same time, this will for iOS to forget them
 - bridged: It will turn on or off the room bridged mode, if it set to off, each device will be individually broadcast
