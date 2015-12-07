@@ -57,7 +57,7 @@ You can change all the current options on the **config.js** file and it include:
 
 Recomendation
 ===
-Use [**Insteon+** app](https://itunes.apple.com/us/app/insteon+/id919270334?mt=8), you can edit the Siri name of each device with it so it can be easier to trigger any accessory with a voice command.
+Use [**Insteon+** app](https://itunes.apple.com/us/app/insteon+/id919270334?mt=8) to add sections, rooms and devices; you can also edit the Siri name of each device with it so it can be easier to trigger any accessory with a voice command.
 
 Debug 
 === 
