@@ -45,7 +45,7 @@ Finally, you can start the app with this command:
 
 Update
 ===
-You can use GIT to keep the code updated to the latest version by running the following code on the VeraLink folder:
+You can use GIT to keep the code up to date with latest version by running the following code on the VeraLink folder:
 
 `git pull`
 
