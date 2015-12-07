@@ -42,7 +42,14 @@ Edit your **config.js** file with your own configuration, at first try just set 
 Finally, you can start the app with this command:
  
 `node VeraLink.js`
- 
+
+Update
+===
+You can use GIT to keep the code updated to the latest version by running the following code on the VeraLink folder:
+
+`git pull`
+
+
 Run it on the background 
 === 
 If you want to use it as a service, you can run it with **forever**
