@@ -76,7 +76,6 @@ Known issues
 - Sometimes it takes a long time to load the prompt that ask for the password of the device, please DON'T close the device adding screen during that time or the device will no longer work, to reset all, just change the **cardinality** setting on the **config.js** file. 
 - A lot of other bug may happen, so please try to debug the application and post your log on the [issues tab](https://github.com/damianxd/VeraLink/issues) 
 - The status is a problem right now, because I know how to get the data from the Vera API but the real problem is the HAP-Nodejs part because I'm using the get callback, but it isn't being trigger when the homekit ask for a status change. Maybe I'm missing something on the documentation, so for now this script is remembering only its own action and not seeing what you manually do with the actual switch. I will try to fix this on a next release.
-- I forgot to change the description on each device to be the name of the Vera accessory, so all the items will be called the same for Siri. It wasn't intended to be like that, so I will fix that sometime today, but for now, you should use "Insteon+" and use the "Edit device" option, there you can change the name Siri use to control each item. The name need to be all in lowercase and write it exactly like you would tell Siri to start it, like if you would say "Turn on the [b]small office[/b] light".
 
 
 Donations 
