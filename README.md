@@ -86,7 +86,7 @@ Known issues
 - Currently dimmer lights are not working with this version of the app because I don't have one to test, I will be releasing a new version with it shortly, but it will be untested. 
 - You can change the password on the config.js file, but you can't use simple passwords like 111-11-1111 or 123-45-678 
 - Sometimes it takes a long time to load the prompt that ask for the password of the device, please DON'T close the device adding screen during that time or the device will no longer work, to reset all, just change the **cardinality** setting on the **config.js** file. 
-- A lot of other bug may happen, so please try to debug the application and post your log on the [issues tab](https://github.com/damianxd/VeraLink/issues) 
+- A lot of other bugs may happen, so please try to debug the application and post your log on the [issues tab](https://github.com/damianxd/VeraLink/issues) 
 - The status is a problem right now, because I know how to get the data from the Vera API but the real problem is the HAP-Nodejs part because I'm using the get callback, but it isn't being trigger when the homekit ask for a status change. Maybe I'm missing something on the documentation, so for now this script is remembering only its own action and not seeing what you manually do with the actual switch. I will try to fix this on a next release.
 
 
