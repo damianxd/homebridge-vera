@@ -73,7 +73,8 @@ Use [**Insteon+** app](https://itunes.apple.com/us/app/insteon+/id919270334?mt=8
 Debug 
 === 
 VeraLink and The HAP-NodeJS library support the debug library for log output. You can print some or all logs by setting the DEBUG environment variable. 
-For instance, to see all debug logs while running the server: 
+For instance, to see all debug logs while running the server:
+
 `DEBUG=* node BridgedCore.js`
  
 Notes 
