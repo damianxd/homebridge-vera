@@ -33,6 +33,10 @@ Next you need to get all the node dependencies with:
  
 `npm install`
  
+Copy the default config.js file
+
+`cp config.default.js config.js`
+
 Edit your **config.js** file with your own configuration, at first try just set the VeraIP and then go for the rest of the settings 
  
 Finally, you can start the app with this command:
