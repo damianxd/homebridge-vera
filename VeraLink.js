@@ -1,5 +1,5 @@
 /* 
- * VeraLink config file
+ * VeraLink v0.1
  * Damian Alarcon
  * Dec 2015
  * damian@laerit.dk
