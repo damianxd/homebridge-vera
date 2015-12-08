@@ -77,7 +77,7 @@ Debug
 VeraLink and The HAP-NodeJS library support the debug library for log output. You can print some or all logs by setting the DEBUG environment variable. 
 For instance, to see all debug logs while running the server:
 
-`DEBUG=* node BridgedCore.js`
+`DEBUG=* node VeraLink.js`
  
 Notes 
 === 
