@@ -11,6 +11,7 @@ module.exports = {
     cardinality: 0, //Add +1 to this in case you find any trouble while adding your device, all the other devices will have to be re-added too 
     bridged: true, //Set to false to use single server for each device instead of one for each room
     includesensor: true, //Include temp sensors on the devices list
-    pincode: '031-45-154', //Keep the format ###-##-### and use complex numbers, eg 111-11-111 or 123-45-678 are invalid 
+    pincode: '031-45-154', //Keep the format ###-##-### and use complex numbers, eg 111-11-111 or 123-45-678 are invalid
+    dimmertest: false, //Set this to true to test test a dimmer device
     mainHNpath: './node_modules/hap-nodejs' // Do not edit unless you know what you're doing
 };

@@ -60,7 +60,7 @@ Options
 You can change all the current options on the **config.js** file and it include:
 - veraIP: The current Vera IP for your Vera device
 - happort: The starting port of HAP, the program will increase this number for each device to make each individual server
-- cardinality: This variable is to change all the names of the devices at the same time, this will for iOS to forget them
+- cardinality: This variable is to change all the names of the devices at the same time, this will make iOS forget them
 - bridged: It will turn on or off the room bridged mode, if it set to off, each device will be individually broadcast
 - includesensor: Allow the use temp sensor as devices.
 - pincode: The global pincode for all the devices, keep the format ###-##-### and use complex numbers, eg 111-11-111 or 123-45-678 are invalid
@@ -88,9 +88,3 @@ Known issues
 - Sometimes it takes a long time to load the prompt that ask for the password of the device, please DON'T close the device adding screen during that time or the device will no longer work, to reset all, just change the **cardinality** setting on the **config.js** file. 
 - A lot of other bugs may happen, so please try to debug the application and post your log on the [issues tab](https://github.com/damianxd/VeraLink/issues) 
 - The status is a problem right now, because I know how to get the data from the Vera API but the real problem is the HAP-Nodejs part because I'm using the get callback, but it isn't being trigger when the homekit ask for a status change. Maybe I'm missing something on the documentation, so for now this script is remembering only its own action and not seeing what you manually do with the actual switch. I will try to fix this on a next release.
-
-
-Donations 
-=== 
-I don't have all the possible device types HAP support, like dimmer lights, so I can't fully test every accessory file of this program. You can help me out buying those with your donation. 
-https://pledgie.com/campaigns/30716
