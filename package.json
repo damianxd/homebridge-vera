@@ -1,5 +1,5 @@
 {
-  "name": "VeraHomeKitBridge",
+  "name": "VeraLink",
   "description": "HomeKit bridge for Vera",
   "version": "0.0.1",
   "scripts": {
