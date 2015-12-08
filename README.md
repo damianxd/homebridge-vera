@@ -49,6 +49,8 @@ You can use GIT to keep the code up to date with latest version by running the f
 
 `git pull`
 
+`npm install`
+
 
 Run it on the background 
 === 
