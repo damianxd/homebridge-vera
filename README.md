@@ -25,11 +25,11 @@ In Ubuntu/Debian system you can install the requirements with the following:
 
 Once all the libraries are set, you can download the actual program:
 
-** For Standalone version:
+** For Standalone version: **
 
 `npm install homebridge-veralink`
 
-** For homebridge version:
+** For homebridge version: **
 
 `npm install -g homebridge`
 
@@ -46,22 +46,13 @@ Edit your **config.js** file with your own configuration, at first try just set 
 Starting the APP
 Finally, you can start the app with this command:
 
-** For Standalone version:
+** For Standalone version: **
 
 `node VeraLink.js`
 
-** For homebridge version:
+** For homebridge version: **
 
 `homebridge`
-
-Update
-===
-You can use GIT to keep the code up to date with latest version by running the following code on the VeraLink folder:
-
-`git pull`
-
-`npm install`
-
 
 Run it on the background 
 === 
