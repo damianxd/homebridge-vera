@@ -61,7 +61,6 @@ function loadconfig()
         
         try {
             fs.accessSync(home+'/.veralink/config.js', fs.F_OK);
-            console.log('found');
             return require('./config.js');
         } catch(e) {
             console.log("\033[31m Please add your configuration file to "+home+"/.veralink/config.js \033[0m");
