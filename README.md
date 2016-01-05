@@ -12,7 +12,7 @@ VeraLink requires the following libraries and applications to run:
 - **git-core**
 - **libnss-mdns**
 - **libavahi-compat-libdnssd-dev**
- 
+
 In Ubuntu/Debian system you can install the requirements with the following:
 
 `sudo apt-get update`
@@ -22,26 +22,37 @@ In Ubuntu/Debian system you can install the requirements with the following:
 `sudo npm config set registry http://registry.npmjs.org/ `
  
 `sudo npm install -g node-gyp`
- 
-Once all the libraries are set, you can download the actual program with:
 
-`git clone https://github.com/damianxd/VeraLink`
- 
-Next you need to get all the node dependencies with:
+Once all the libraries are set, you can download the actual program:
 
-`cd Veralink` 
- 
-`npm install`
- 
+** For Standalone version:
+
+`npm install homebridge-veralink`
+
+** For homebridge version:
+
+`npm install -g homebridge`
+
+`npm install -g homebridge-veralink`
+
 Copy the default config.js file
 
 `cp config.default.js config.js`
 
+or copy it to your home directory in case you are using homebridge
+
 Edit your **config.js** file with your own configuration, at first try just set the VeraIP and then go for the rest of the settings 
- 
+
+Starting the APP
 Finally, you can start the app with this command:
- 
+
+** For Standalone version:
+
 `node VeraLink.js`
+
+** For homebridge version:
+
+`homebridge`
 
 Update
 ===
