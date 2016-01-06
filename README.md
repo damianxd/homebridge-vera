@@ -70,7 +70,6 @@ Edit your homebridge config.json file located on **~/.homebridge/config.json** a
             "platform" : "Vera",
             "name" : "Vera"
         }]
-	]
 }
 
 then you can run the app with the following command:
