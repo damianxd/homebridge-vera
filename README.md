@@ -55,13 +55,12 @@ Execute with:
 
 Edit your homebridge config.json file located on **~/.homebridge/config.json** and add the platform for Vera, example:
 
-{
+`{
 	"bridge": {
 		"name": "Homebridge",
 		"pin": "987-65-432",
 		"username": "CC:22:3D:E3:CE:30",
 		"veraIP": "192.168.0.228"
-
 	},
 	"platforms": [{
 		"platform": "PhilipsHue",
@@ -70,7 +69,7 @@ Edit your homebridge config.json file located on **~/.homebridge/config.json** a
             "platform" : "Vera",
             "name" : "Vera"
         }]
-}
+}`
 
 then you can run the app with the following command:
 
