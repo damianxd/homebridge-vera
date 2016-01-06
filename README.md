@@ -66,10 +66,10 @@ Edit your homebridge config.json file located on **~/.homebridge/config.json** a
 	"platforms": [{
 		"platform": "PhilipsHue",
 		"name": "Philips Hue",
-	}, **{
+	}, {
             "platform" : "Vera",
             "name" : "Vera"
-        }**]
+        }]
 	]
 }
 
