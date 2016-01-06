@@ -55,7 +55,7 @@ Execute with:
 
 Edit your homebridge config.json file located on **~/.homebridge/config.json** and add the platform for Vera, example:
 
-`{
+{
 	"bridge": {
 		"name": "Homebridge",
 		"pin": "987-65-432",
@@ -71,7 +71,9 @@ Edit your homebridge config.json file located on **~/.homebridge/config.json** a
             "name" : "Vera"
         }**]
 	]
-}`
+}
+
+then you can run the app with the following command:
 
 `homebridge`
 
