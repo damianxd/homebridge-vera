@@ -25,15 +25,15 @@ In Ubuntu/Debian system you can install the requirements with the following:
 
 Once all the libraries are set, you can download the actual program:
 
-** For Standalone version: **
+**For Standalone version:**
 
 `npm install homebridge-veralink`
 
-** For homebridge version: **
+**For homebridge version:**
 
 `npm install -g homebridge`
 
-`npm install -g homebridge-veralink`
+`npm install -g homebridge-vera`
 
 Copy the default config.js file
 
@@ -44,13 +44,34 @@ or copy it to your home directory in case you are using homebridge
 Edit your **config.js** file with your own configuration, at first try just set the VeraIP and then go for the rest of the settings 
 
 Starting the APP
-Finally, you can start the app with this command:
+===
+**For Standalone version:**
 
-** For Standalone version: **
+Execute with:
 
 `node VeraLink.js`
 
-** For homebridge version: **
+**For homebridge version:**
+
+Edit your homebridge config.json file located on **~/.homebridge/config.json** and add the platform for Vera, example:
+
+`{
+	"bridge": {
+		"name": "Homebridge",
+		"pin": "987-65-432",
+		"username": "CC:22:3D:E3:CE:30",
+		"veraIP": "192.168.0.228"
+
+	},
+	"platforms": [{
+		"platform": "PhilipsHue",
+		"name": "Philips Hue",
+	}, **{
+            "platform" : "Vera",
+            "name" : "Vera"
+        }**]
+	]
+}`
 
 `homebridge`
 
