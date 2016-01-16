@@ -23,6 +23,22 @@ function VeraLinkPlatform(log, config)
     this.log        = log;
     this.rooms      = {};
     this.HAPNode     = {'request':request, 'uuid':uuid, 'Accessory':Accessory, 'Service':Service, 'Characteristic':Characteristic, 'debug':debug, 'hashing':hashing, 'return': true};
+    
+    if(typeof config.veraIP !== "undefined")
+    {
+        Veraconfig.veraIP = config.veraIP;
+    }
+    
+    if(typeof config.includesensor !== "undefined")
+    {
+        Veraconfig.includesensor = config.includesensor;
+    }
+    
+    if(typeof config.dimmertest !== "undefined")
+    {
+        Veraconfig.dimmertest = config.dimmertest;
+    }
+    
     this.functions   = require('./lib/functions.js')(this.HAPNode,Veraconfig);
     this.verainfo = this.functions.getVeraInfo(Veraconfig.veraIP);
 }
