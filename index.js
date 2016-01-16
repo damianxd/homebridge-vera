@@ -79,12 +79,14 @@ function loadconfig()
             fs.accessSync(home+'/.veralink/config.js', fs.F_OK);
             return require('./config.js');
         } catch(e) {
-            console.log("\033[31m Please add your configuration file to "+home+"/.veralink/config.js \033[0m");
+            console.log("\033[31m No configuration found, please write your configuration on .homebridge/config.json \033[0m");
+            console.log("\033[31m or add your configuration file to "+home+"/.veralink/config.js \033[0m");
         }
     } catch (e) {
         try {
             fs.mkdirSync(home+'/.veralink');
-            console.log("\033[31m Please add your configuration file to "+home+"/.veralink/config.js \033[0m");
+            console.log("\033[31m No configuration found, please write your configuration on .homebridge/config.json \033[0m");
+            console.log("\033[31m or add your configuration file to "+home+"/.veralink/config.js \033[0m");
         } catch(e) {
             if ( e.code != 'EEXIST' ) throw e;
         }
