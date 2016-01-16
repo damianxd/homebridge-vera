@@ -59,15 +59,12 @@ Edit your homebridge config.json file located on **~/.homebridge/config.json** a
 	"bridge": {
 		"name": "Homebridge",
 		"pin": "987-65-432",
-		"username": "CC:22:3D:E3:CE:30",
-		"veraIP": "192.168.0.228"
+		"username": "CC:22:3D:E3:CE:30"
 	},
 	"platforms": [{
-		"platform": "PhilipsHue",
-		"name": "Philips Hue",
-	}, {
             "platform" : "Vera",
-            "name" : "Vera"
+            "name" : "Vera",
+            "veraIP" : "10.0.1.5"
         }]
 }`
 
