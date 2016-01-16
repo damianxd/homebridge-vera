@@ -64,7 +64,9 @@ Edit your homebridge config.json file located on **~/.homebridge/config.json** a
 	"platforms": [{
             "platform" : "Vera",
             "name" : "Vera",
-            "veraIP" : "10.0.1.5"
+            "veraIP" : "10.0.1.5",
+            "includesensor" : false,
+            "dimmertest" : false
         }]
 }`
 
