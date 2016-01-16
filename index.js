@@ -1,6 +1,6 @@
 var Service, Characteristic, Accessory, uuid;
 
-var Veraconfig      = loadconfig();
+var Veraconfig      = {};
 var debug           = require("debug")('VeraLink');
 var request         = require("sync-request");
 var hashing         = require("create-hash");
@@ -20,6 +20,7 @@ module.exports = function (homebridge)
 
 function VeraLinkPlatform(log, config)
 {
+    var Veraconfig  = loadconfig();
     this.log        = log;
     this.rooms      = {};
     this.HAPNode     = {'request':request, 'uuid':uuid, 'Accessory':Accessory, 'Service':Service, 'Characteristic':Characteristic, 'debug':debug, 'hashing':hashing, 'return': true};
@@ -37,6 +38,13 @@ function VeraLinkPlatform(log, config)
     if(typeof config.dimmertest !== "undefined")
     {
         Veraconfig.dimmertest = config.dimmertest;
+    }
+    
+    if(typeof config.veraIP === "undefined")
+    {
+        console.log("\033[31m No configuration found, please write your configuration on .homebridge/config.json \033[0m");
+        console.log("\033[31m or add your configuration file to "+home+"/.veralink/config.js \033[0m");
+        process.exit();
     }
     
     this.functions   = require('./lib/functions.js')(this.HAPNode,Veraconfig);
@@ -79,14 +87,12 @@ function loadconfig()
             fs.accessSync(home+'/.veralink/config.js', fs.F_OK);
             return require('./config.js');
         } catch(e) {
-            console.log("\033[31m No configuration found, please write your configuration on .homebridge/config.json \033[0m");
-            console.log("\033[31m or add your configuration file to "+home+"/.veralink/config.js \033[0m");
+            return {};
         }
     } catch (e) {
         try {
             fs.mkdirSync(home+'/.veralink');
-            console.log("\033[31m No configuration found, please write your configuration on .homebridge/config.json \033[0m");
-            console.log("\033[31m or add your configuration file to "+home+"/.veralink/config.js \033[0m");
+            return {};
         } catch(e) {
             if ( e.code != 'EEXIST' ) throw e;
         }
