@@ -55,20 +55,25 @@ Execute with:
 
 Edit your homebridge config.json file located on **~/.homebridge/config.json** and add the platform for Vera, example:
 
-`{
-	"bridge": {
-		"name": "Homebridge",
-		"pin": "987-65-432",
-		"username": "CC:22:3D:E3:CE:30"
-	},
-	"platforms": [{
-            "platform" : "Vera",
-            "name" : "Vera",
-            "veraIP" : "10.0.1.5",
-            "includesensor" : false,
-            "dimmertest" : false
-        }]
-}`
+````
+{
+    "bridge": {
+        "name": "Homebridge",
+        "pin": "987-65-432",
+        "username": "CC:22:3D:E3:CE:30"
+    },
+    "platforms": [
+        {
+            "platform": "Vera",
+            "name": "Vera",
+            "veraIP": "10.0.1.5",
+            "includesensor": false,
+            "securitypoll": 2000,
+            "dimmertest": false
+        }
+    ]
+}
+````
 
 then you can run the app with the following command:
 
@@ -88,7 +93,7 @@ You can change all the current options on the **config.js** file and it include:
 - bridged: It will turn on or off the room bridged mode, if it set to off, each device will be individually broadcast
 - includesensor: Allow the use temp sensor as devices.
 - pincode: The global pincode for all the devices, keep the format ###-##-### and use complex numbers, eg 111-11-111 or 123-45-678 are invalid
-
+- securitypoll: Time in milliseconds to poll security sensors to get most recent state (live updates)
 
 Recomendation
 ===
@@ -107,7 +112,6 @@ Special thanks to Albeebe for all his work and his original idea to get Vera to 
  
 Known issues 
 === 
-- Currently dimmer lights are not working with this version of the app because I don't have one to test, I will be releasing a new version with it shortly, but it will be untested. 
 - You can change the password on the config.js file, but you can't use simple passwords like 111-11-1111 or 123-45-678 
 - Sometimes it takes a long time to load the prompt that ask for the password of the device, please DON'T close the device adding screen during that time or the device will no longer work, to reset all, just change the **cardinality** setting on the **config.js** file. 
 - A lot of other bugs may happen, so please try to debug the application and post your log on the [issues tab](https://github.com/damianxd/VeraLink/issues) 
