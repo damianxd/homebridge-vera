@@ -6,7 +6,7 @@
     "start": "node VeraLink.js"
   },
   "engines": {
-    "homebridge": "0.2.13"
+    "homebridge": "^0.2"
   },
   "dependencies": {
     "debug": "^2.2.0",
