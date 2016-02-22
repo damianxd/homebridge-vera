@@ -1,12 +1,12 @@
 {
   "name": "homebridge-veralink",
   "description": "HomeKit bridge for Vera",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "scripts": {
     "start": "node VeraLink.js"
   },
   "engines": {
-    "homebridge": "^0.2"
+    "homebridge": ">=0.2.13"
   },
   "dependencies": {
     "debug": "^2.2.0",

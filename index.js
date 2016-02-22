@@ -40,6 +40,13 @@ function VeraLinkPlatform(log, config)
         Veraconfig.dimmertest = config.dimmertest;
     }
     
+    if(typeof config.securitypoll === "undefined")
+    {
+        Veraconfig.securitypoll = 2000;
+    } else {
+        Veraconfig.securitypoll = config.securitypoll;
+    }
+
     if(typeof config.veraIP === "undefined")
     {
         console.log("\033[31m No configuration found, please write your configuration on .homebridge/config.json \033[0m");

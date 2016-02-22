@@ -55,20 +55,25 @@ Execute with:
 
 Edit your homebridge config.json file located on **~/.homebridge/config.json** and add the platform for Vera, example:
 
-`{
-	"bridge": {
-		"name": "Homebridge",
-		"pin": "987-65-432",
-		"username": "CC:22:3D:E3:CE:30"
-	},
-	"platforms": [{
-            "platform" : "Vera",
-            "name" : "Vera",
-            "veraIP" : "10.0.1.5",
-            "includesensor" : false,
-            "dimmertest" : false
-        }]
-}`
+````
+{
+    "bridge": {
+        "name": "Homebridge",
+        "pin": "987-65-432",
+        "username": "CC:22:3D:E3:CE:30"
+    },
+    "platforms": [
+        {
+            "platform": "Vera",
+            "name": "Vera",
+            "veraIP": "10.0.1.5",
+            "includesensor": false,
+            "securitypoll": 2000,
+            "dimmertest": false
+        }
+    ]
+}
+````
 
 then you can run the app with the following command:
 
@@ -88,7 +93,7 @@ You can change all the current options on the **config.js** file and it include:
 - bridged: It will turn on or off the room bridged mode, if it set to off, each device will be individually broadcast
 - includesensor: Allow the use temp sensor as devices.
 - pincode: The global pincode for all the devices, keep the format ###-##-### and use complex numbers, eg 111-11-111 or 123-45-678 are invalid
-
+- securitypoll: Time in milliseconds to poll security sensors to get most recent state (live updates)
 
 Recomendation
 ===
