@@ -27,7 +27,7 @@ Once all the libraries are set, you can download the actual program:
 
 **For Standalone version:**
 
-`npm install homebridge-veralink`
+`npm install homebridge-vera`
 
 **For homebridge version:**
 
