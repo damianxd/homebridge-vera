@@ -15,7 +15,9 @@
     "fs": "^0.0.2",
     "path": "^0.12.7",
     "node-persist": "0.0.8",
-    "hap-nodejs": "^0.0.7"
+    "hap-nodejs": "^0.0.7",
+    "prompt": "^1.0.0",
+    "async": "^1.5.2"
   },
   "main": "index.js",
   "devDependencies": {},

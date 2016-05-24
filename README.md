@@ -35,14 +35,6 @@ Once all the libraries are set, you can download the actual program:
 
 `npm install -g homebridge-vera`
 
-Copy the default config.js file
-
-`cp config.default.js config.js`
-
-or copy it to your home directory in case you are using homebridge
-
-Edit your **config.js** file with your own configuration, at first try just set the VeraIP and then go for the rest of the settings 
-
 Starting the APP
 ===
 **For Standalone version:**
@@ -50,6 +42,8 @@ Starting the APP
 Execute with:
 
 `node VeraLink.js`
+
+The first run will prompt you with some variables about your Vera device to generate the proper config.js file
 
 **For homebridge version:**
 
@@ -68,6 +62,7 @@ Edit your homebridge config.json file located on **~/.homebridge/config.json** a
             "name": "Vera",
             "veraIP": "10.0.1.5",
             "includesensor": false,
+            ignorerooms: [20,21,22],
             "securitypoll": 2000,
             "dimmertest": false
         }
