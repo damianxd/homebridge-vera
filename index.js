@@ -40,6 +40,11 @@ function VeraLinkPlatform(log, config)
         Veraconfig.dimmertest = config.dimmertest;
     }
     
+    if(typeof config.ignorerooms !== "undefined")
+    {
+        Veraconfig.ignorerooms = config.ignorerooms;
+    }
+    
     if(typeof config.securitypoll === "undefined")
     {
         Veraconfig.securitypoll = 2000;
