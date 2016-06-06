@@ -45,6 +45,11 @@ function VeraLinkPlatform(log, config)
         Veraconfig.ignorerooms = config.ignorerooms;
     }
     
+    if(typeof config.ignoredevices !== "undefined")
+    {
+        Veraconfig.ignoredevices = config.ignoredevices;
+    }
+    
     if(typeof config.securitypoll === "undefined")
     {
         Veraconfig.securitypoll = 2000;
