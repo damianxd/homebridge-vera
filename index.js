@@ -25,38 +25,11 @@ function VeraLinkPlatform(log, config)
     this.rooms      = {};
     this.HAPNode     = {'request':request, 'uuid':uuid, 'Accessory':Accessory, 'Service':Service, 'Characteristic':Characteristic, 'debug':debug, 'hashing':hashing, 'return': true};
     
-    if(typeof config.veraIP !== "undefined")
-    {
-        Veraconfig.veraIP = config.veraIP;
-    }
+    defaults = {'bridged': true,'includesensor': false, 'dimmertest': false, 'ignorerooms': [], 'ignoredevices': [], 'securitypoll': 2000};
     
-    if(typeof config.includesensor !== "undefined")
-    {
-        Veraconfig.includesensor = config.includesensor;
-    }
+    Veraconfig = merge_options(defaults, Veraconfig);
+    Veraconfig = merge_options(Veraconfig,config);
     
-    if(typeof config.dimmertest !== "undefined")
-    {
-        Veraconfig.dimmertest = config.dimmertest;
-    }
-    
-    if(typeof config.ignorerooms !== "undefined")
-    {
-        Veraconfig.ignorerooms = config.ignorerooms;
-    }
-    
-    if(typeof config.ignoredevices !== "undefined")
-    {
-        Veraconfig.ignoredevices = config.ignoredevices;
-    }
-    
-    if(typeof config.securitypoll === "undefined")
-    {
-        Veraconfig.securitypoll = 2000;
-    } else {
-        Veraconfig.securitypoll = config.securitypoll;
-    }
-
     if(typeof config.veraIP === "undefined")
     {
         console.log("\033[31m No configuration found, please write your configuration on .homebridge/config.json \033[0m");
@@ -114,4 +87,12 @@ function loadconfig()
             if ( e.code != 'EEXIST' ) throw e;
         }
     }
+}
+
+function merge_options(obj1,obj2)
+{
+    var obj3 = {};
+    for (var attrname in obj1) { obj3[attrname] = obj1[attrname]; }
+    for (var attrname in obj2) { obj3[attrname] = obj2[attrname]; }
+    return obj3;
 }
