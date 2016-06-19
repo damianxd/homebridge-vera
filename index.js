@@ -43,7 +43,7 @@ function VeraLinkPlatform(log, config)
 
 VeraLinkPlatform.prototype = {
     accessories: function(callback)
-    {
+    { 
         var that = this;
         var foundAccessories = [];
         devices = this.functions.processall(this.verainfo);
