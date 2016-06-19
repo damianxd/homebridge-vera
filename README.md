@@ -62,7 +62,7 @@ Edit your homebridge config.json file located on **~/.homebridge/config.json** a
             "name": "Vera",
             "veraIP": "10.0.1.5",
             "includesensor": false,
-            ignorerooms: [20,21,22],
+            "ignorerooms": [20,21,22],
             "securitypoll": 2000,
             "dimmertest": false
         }
