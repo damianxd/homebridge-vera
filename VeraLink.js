@@ -8,7 +8,8 @@
 var async          = require('async');
 var prompt          = require('prompt');
 var fs              = require('fs');
-var request         = require("sync-request");
+var request         = require("then-request");
+var syncrequest     = require("sync-request");
 
 async.series([
     function(callback)
@@ -30,7 +31,7 @@ async.series([
                         url = "http://" + value + ":3480/data_request?id=lu_sdata";
                         try
                         {
-                            res = request('GET', url, {json:true, timeout:1500});
+                            res = syncrequest('GET', url, {json:true, timeout:1500});
                             data = JSON.parse(res.body.toString('utf8'));
                         }
                         catch (ex)
@@ -194,18 +195,19 @@ async.series([
         storage.initSync();
 
         // Load Vera info from the data_request URL
-        var verainfo = functions.getVeraInfo(config.veraIP);
+        functions.getVeraInfo(config.veraIP).then(function(verainfo) {
+            if(typeof verainfo === 'object')
+            {
+                if(config.bridged === true)
+                {
+                    functions.processrooms(verainfo);
+                }
+                else
+                {
+                    functions.processall(verainfo);
+                }
+            }
+        });
 
-        if(typeof verainfo === 'object')
-        {
-            if(config.bridged === true)
-            {
-                functions.processrooms(verainfo);
-            }
-            else
-            {
-                functions.processall(verainfo);
-            }
-        }
     }
 ]);
