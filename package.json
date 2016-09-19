@@ -11,7 +11,7 @@
   "dependencies": {
     "debug": "^2.2.0",
     "create-hash": "^1.1.2",
-    "sync-request": "^2.1.0",
+    "request-promise": "^3.0.0",
     "node-persist": "0.0.8",
     "hap-nodejs": "^0.0.7",
     "prompt": "^1.0.0",

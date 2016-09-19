@@ -8,7 +8,7 @@
 var async          = require('async');
 var prompt          = require('prompt');
 var fs              = require('fs');
-var request         = require("sync-request");
+var request         = require("request-promise");
 
 async.series([
     function(callback)
@@ -30,25 +30,26 @@ async.series([
                         url = "http://" + value + ":3480/data_request?id=lu_sdata";
                         try
                         {
-                            res = request('GET', url, {json:true, timeout:1500});
-                            data = JSON.parse(res.body.toString('utf8'));
+                            return request({method:'GET', uri:url, json:true, timeout:1500}).then(function(data){
+                                if(typeof data === 'object' && data !== null)
+                                {
+                                    listsrooms = data.rooms;
+
+                                    return true;
+                                }
+                                else
+                                {
+                                    console.log('Your VeraIP ('+value+') has no connection, please check that it is a correct one')
+                                    return false;
+                                }
+                            });
                         }
                         catch (ex)
                         {
                             data = null;
                         }
 
-                        if(typeof data === 'object' && data !== null)
-                        {
-                            listsrooms = data.rooms;
-                            
-                            return true;
-                        }
-                        else
-                        {
-                            console.log('Your VeraIP ('+value+') has no connection, please check that it is a correct one')
-                            return false;
-                        }
+                        
                     }
                   },
                   happort: {
@@ -194,18 +195,19 @@ async.series([
         storage.initSync();
 
         // Load Vera info from the data_request URL
-        var verainfo = functions.getVeraInfo(config.veraIP);
-
-        if(typeof verainfo === 'object')
+        functions.getVeraInfo().then(function(verainfo)
         {
-            if(config.bridged === true)
+            if(typeof verainfo === 'object')
             {
-                functions.processrooms(verainfo);
+                if(config.bridged === true)
+                {
+                    functions.processrooms(verainfo);
+                }
+                else
+                {
+                    functions.processall(verainfo);
+                }
             }
-            else
-            {
-                functions.processall(verainfo);
-            }
-        }
+        });
     }
 ]);

@@ -2,7 +2,7 @@ var Service, Characteristic, Accessory, uuid;
 
 var Veraconfig      = {};
 var debug           = require("debug")('VeraLink');
-var request         = require("sync-request");
+var request         = require("request-promise");
 var hashing         = require("create-hash");
 
 module.exports = function (homebridge)
@@ -38,20 +38,26 @@ function VeraLinkPlatform(log, config)
     }
     
     this.functions   = require('./lib/functions.js')(this.HAPNode,Veraconfig);
-    this.verainfo = this.functions.getVeraInfo(Veraconfig.veraIP);
 }
 
 VeraLinkPlatform.prototype = {
     accessories: function(callback)
-    { 
+    {
         var that = this;
-        var foundAccessories = [];
-        devices = this.functions.processall(this.verainfo);
-        devices.forEach(function(device)
+        that.functions.getVeraInfo().then(function(verainfo)
         {
-            foundAccessories.push(that.createAccessory(device,that));
+            if(typeof verainfo === 'object')
+            {
+                this.verainfo = verainfo;
+                var foundAccessories = [];
+                devices = that.functions.processall(verainfo);
+                devices.forEach(function(device)
+                {
+                    foundAccessories.push(that.createAccessory(device,that));
+                });
+                callback(foundAccessories);
+            }
         });
-        callback(foundAccessories);
     },
     createAccessory: function(device,platform) {
         device.getServices = function() {
