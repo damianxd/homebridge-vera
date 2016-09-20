@@ -25,7 +25,7 @@ function VeraLinkPlatform(log, config)
     this.rooms      = {};
     this.HAPNode     = {'request':request, 'uuid':uuid, 'Accessory':Accessory, 'Service':Service, 'Characteristic':Characteristic, 'debug':debug, 'hashing':hashing, 'return': true};
     
-    defaults = {'bridged': true,'includesensor': false, 'dimmertest': false, 'ignorerooms': [], 'ignoredevices': [], 'securitypoll': 2000};
+    defaults = {'bridged': true,'includesensor': false, 'dimmertest': false, 'ignorerooms': [], 'ignoredevices': [], 'securitypoll': 2000, 'Fans': [], 'Outlets': []};
     
     Veraconfig = merge_options(defaults, Veraconfig);
     Veraconfig = merge_options(Veraconfig,config);
