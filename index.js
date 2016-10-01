@@ -25,6 +25,10 @@ function VeraLinkPlatform(log, config)
     this.rooms      = {};
     this.HAPNode     = {'request':request, 'uuid':uuid, 'Accessory':Accessory, 'Service':Service, 'Characteristic':Characteristic, 'debug':debug, 'hashing':hashing, 'return': true};
     
+    process.on('uncaughtException', function (err) {
+        debug(err);
+    });
+    
     defaults = {'bridged': true,'includesensor': false, 'dimmertest': false, 'ignorerooms': [], 'ignoredevices': [], 'securitypoll': 2000};
     
     Veraconfig = merge_options(defaults, Veraconfig);

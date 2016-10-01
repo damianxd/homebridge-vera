@@ -187,6 +187,10 @@ async.series([
         var hashing         = require("create-hash");
         var debug           = require("debug")('VeraLink');
         
+        process.on('uncaughtException', function (err) {
+            debug(err);
+        });
+        
         var HAPNode = {'request':request, 'storage':storage, 'uuid':uuid, 'Bridge':Bridge, 'Accessory':Accessory, 'accessoryLoader':AccessoryLoader, 'hashing':hashing, 'Service':Service, 'Characteristic':Characteristic, 'debug':debug};
         var functions       = require('./lib/functions.js')(HAPNode,config); 
         console.log("HAP-NodeJS starting...");
@@ -211,3 +215,4 @@ async.series([
         });
     }
 ]);
+
