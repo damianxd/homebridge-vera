@@ -64,7 +64,8 @@ Edit your homebridge config.json file located on **~/.homebridge/config.json** a
             "includesensor": false,
             "ignorerooms": [20,21,22],
             "securitypoll": 2000,
-            "includethermostat": false
+            "includethermostat": false,
+            "includeRGB": false
         }
     ]
 }
