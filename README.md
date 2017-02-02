@@ -65,7 +65,8 @@ Edit your homebridge config.json file located on **~/.homebridge/config.json** a
             "ignorerooms": [20,21,22],
             "securitypoll": 2000,
             "includethermostat": false,
-            "includeRGB": false
+            "includeRGB": false,
+            "garageLock": [23]
         }
     ]
 }
@@ -90,6 +91,7 @@ You can change all the current options on the **config.js** file and it include:
 - includesensor: Allow the use temp sensor as devices.
 - pincode: The global pincode for all the devices, keep the format ###-##-### and use complex numbers, eg 111-11-111 or 123-45-678 are invalid
 - securitypoll: Time in milliseconds to poll security sensors to get most recent state (live updates)
+- garageLock: Add support for MiOS Garage App (https://apps.mios.com/plugin.php?id=2998) which operates under the hood as a lock, but appears as a garage door in HomeKit.
 
 Recomendation
 ===
