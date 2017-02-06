@@ -66,7 +66,7 @@ Edit your homebridge config.json file located on **~/.homebridge/config.json** a
             "securitypoll": 2000,
             "includethermostat": false,
             "includeRGB": false,
-            "garageLock": [23]
+            "garageLocks": [23]
         }
     ]
 }
