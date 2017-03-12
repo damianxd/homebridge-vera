@@ -26,7 +26,7 @@ VeraLinkPlatform.prototype = {
           .getVeraInfo()
           .then( (verainfo)=>{
             if(typeof verainfo === 'object'){
-              var devices = this.functions.processall(this.verainfo);
+              var devices = this.functions.processall(verainfo);
               var accessories = devices.map( (device)=>{
                   return this.createAccessory(device,this);
               });
