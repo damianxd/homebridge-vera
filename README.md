@@ -68,7 +68,8 @@ Edit your homebridge config.json file located on **~/.homebridge/config.json** a
             "includeRGB": false,          
             "garageLocks": [23],
             "ignoredevices":[24,25],
-            "ignorescenes":[26,27]
+            "ignorescenes":[26,27],
+            "houseModes": false
         }
     ]
 }
@@ -94,6 +95,7 @@ You can change all the current options on the **config.js** file and it include:
 - pincode: The global pincode for all the devices, keep the format ###-##-### and use complex numbers, eg 111-11-111 or 123-45-678 are invalid
 - securitypoll: Time in milliseconds to poll security sensors to get most recent state (live updates)
 - garageLock: Add support for MiOS Garage App (https://apps.mios.com/plugin.php?id=2998) which operates under the hood as a lock, but appears as a garage door in HomeKit.
+- houseModes: Implements Vera house modes as a Security device. This is not a perfect 1-1 mapping, as the fourth category by security standards is "off" while Vera is "vacation" (both are pretty rarely used)
 
 Recomendation
 ===
