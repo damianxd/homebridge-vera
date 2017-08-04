@@ -206,6 +206,7 @@ async.series([
                 if(config.bridged === true)
                 {
                     functions.processrooms(verainfo);
+                    functions.createSceneBridge(verainfo);
                 }
                 else
                 {
