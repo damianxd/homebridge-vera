@@ -29,7 +29,7 @@ Once all the libraries are set, you can download the actual program:
 
 `sudo npm install -g --unsafe-perm homebridge`
 
-`npm install -g homebridge-vera`
+`sudo npm install -g homebridge-vera`
 
 Starting the APP
 ===
