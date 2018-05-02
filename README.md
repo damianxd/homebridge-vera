@@ -25,27 +25,14 @@ In Ubuntu/Debian system you can install the requirements with the following:
 
 Once all the libraries are set, you can download the actual program:
 
-**For Standalone version:**
-
-`npm install homebridge-vera`
-
 **For homebridge version:**
 
 `sudo npm install -g --unsafe-perm homebridge`
 
-`sudo npm install -g homebridge-vera`
+`npm install -g homebridge-vera`
 
 Starting the APP
 ===
-**For Standalone version:**
-
-Execute with:
-
-`node VeraLink.js`
-
-The first run will prompt you with some variables about your Vera device to generate the proper config.js file
-
-**For homebridge version:**
 
 Edit your homebridge config.json file located on **~/.homebridge/config.json** and add the platform for Vera, example:
 
