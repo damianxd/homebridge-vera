@@ -56,6 +56,7 @@ Edit your homebridge config.json file located on **~/.homebridge/config.json** a
             "garageLocks": [23],
             "ignoredevices":[24,25],
             "ignorescenes":[26,27],
+            "ignoreplugins": ["Nest","PhilipsHue","Wemo"],
             "houseModes": false
         }
     ]
