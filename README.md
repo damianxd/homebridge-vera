@@ -79,7 +79,7 @@ You can change all the current options on the **config.js** file and it include:
 - happort: The starting port of HAP, the program will increase this number for each device to make each individual server
 - cardinality: This variable is to change all the names of the devices at the same time, this will make iOS forget them
 - bridged: It will turn on or off the room bridged mode, if it set to off, each device will be individually broadcast
-- includesensor: Allow the use temp sensor as devices.
+- includesensor: Allow the use sensors.
 - pincode: The global pincode for all the devices, keep the format ###-##-### and use complex numbers, eg 111-11-111 or 123-45-678 are invalid
 - securitypoll: Time in milliseconds to poll security sensors to get most recent state (live updates)
 - garageLock: Add support for MiOS Garage App (https://apps.mios.com/plugin.php?id=2998) which operates under the hood as a lock, but appears as a garage door in HomeKit.
