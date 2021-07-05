@@ -1,3 +1,7 @@
+# Looking for adoption
+
+We are searching for some developer who's willing to take this project. None of the original developers is active any more, if you want to be in charge, please contact me thru the issues section.
+
 # VeraLink
 
 VeraLink is an application for Z-Wave accessories from Vera to run as HomeKit Accessory Servers, allowing the devices to connect to iOS devices and be controlled by Siri.
