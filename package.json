@@ -15,7 +15,7 @@
     "request-promise": "^4.1.1",
     "node-persist": "0.0.8",
     "prompt": "^1.0.0",
-    "async": "^1.5.2"
+    "async": "^2.6.4"
   },
   "main": "index.js",
   "devDependencies": {},
