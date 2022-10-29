@@ -27,7 +27,7 @@ async.series([
                     message: 'VeraIP must be a valid IP number',
                     required: true,
                     conform: function(value) {
-                        url = "http://" + value + ":3480/data_request?id=lu_sdata";
+                        url = "http://" + value + "/port_3480/data_request?id=lu_sdata";
                         try
                         {
                             return request({method:'GET', uri:url, json:true, timeout:1500}).then(function(data){
