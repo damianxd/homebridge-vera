@@ -1,36 +1,50 @@
 {
   "name": "homebridge-vera",
-  "description": "HomeKit bridge for Vera",
-  "version": "0.8.3-beta.12",
-  "scripts": {
-    "start": "node VeraLink.js"
-  },
-  "engines": {
-    "homebridge": ">=0.2.13"
-  },
-  "dependencies": {
-    "debug": "^2.2.0",
-    "create-hash": "^1.1.2",
-    "request": "^2.75.0",
-    "request-promise": "^4.1.1",
-    "node-persist": "0.0.8",
-    "prompt": "^1.0.0",
-    "async": "^1.5.2"
-  },
+  "displayName": "Homebridge Vera",
+  "version": "1.0.0",
+  "description": "Homebridge platform plugin that exposes Vera (MiOS/Ezlo) Z-Wave devices and scenes to HomeKit.",
+  "license": "ISC",
+  "author": "Damian Alarcon",
   "main": "index.js",
-  "devDependencies": {},
+  "engines": {
+    "node": "^20.18.1 || ^22.10.0 || ^24.0.0",
+    "homebridge": "^1.8.0 || ^2.0.0"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/damianxd/VeraLink.git"
+    "url": "git+https://github.com/damianxd/homebridge-vera.git"
+  },
+  "bugs": {
+    "url": "https://github.com/damianxd/homebridge-vera/issues"
   },
   "keywords": [
+    "homebridge-plugin",
     "homebridge",
     "vera",
     "veralink",
-    "homebridge-plugin"
+    "mios",
+    "ezlo",
+    "z-wave",
+    "homekit"
   ],
-  "author": {
-    "name": "Damian Alarcon"
+  "scripts": {
+    "lint": "eslint .",
+    "test": "node --test",
+    "check": "node --check index.js",
+    "prepublishOnly": "npm run lint && npm test"
   },
-  "license": "ISC"
+  "dependencies": {},
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.5.0",
+    "globals": "^17.6.0",
+    "homebridge": "^2.1.0"
+  },
+  "files": [
+    "index.js",
+    "src",
+    "config.schema.json",
+    "LICENSE",
+    "README.md"
+  ]
 }

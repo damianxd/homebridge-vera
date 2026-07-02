@@ -1,0 +1,90 @@
+{
+  "pluginAlias": "Vera",
+  "pluginType": "platform",
+  "singular": false,
+  "headerDisplay": "Exposes Vera (MiOS/Ezlo) Z-Wave devices and scenes to HomeKit. Enter the IP address or hostname of your Vera controller below.",
+  "footerDisplay": "For help and bug reports, see the [project repository](https://github.com/damianxd/homebridge-vera).",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "title": "Name",
+        "type": "string",
+        "default": "Vera",
+        "required": true,
+        "description": "Plugin name as displayed in the Homebridge log."
+      },
+      "veraIP": {
+        "title": "Vera IP Address / Hostname",
+        "type": "string",
+        "required": true,
+        "format": "hostname",
+        "placeholder": "10.0.1.5",
+        "description": "The IP address or hostname of your Vera controller."
+      },
+      "pollInterval": {
+        "title": "Poll Interval (ms)",
+        "type": "integer",
+        "default": 2000,
+        "minimum": 500,
+        "description": "How often (in milliseconds) to poll the Vera controller for live device state."
+      },
+      "includesensor": {
+        "title": "Include Sensors",
+        "type": "boolean",
+        "default": false,
+        "description": "Expose motion, contact, light, humidity, smoke, CO and temperature sensors."
+      },
+      "includethermostat": {
+        "title": "Include Thermostats",
+        "type": "boolean",
+        "default": false
+      },
+      "includeRGB": {
+        "title": "Include RGB / Colour Lights",
+        "type": "boolean",
+        "default": false
+      },
+      "houseModes": {
+        "title": "Expose House Modes as a Security System",
+        "type": "boolean",
+        "default": false
+      },
+      "saveBrightness": {
+        "title": "Restore Brightness on Power On (colour lights)",
+        "type": "boolean",
+        "default": false
+      },
+      "ignorerooms": {
+        "title": "Ignore Rooms",
+        "type": "array",
+        "items": { "title": "Room ID", "type": "integer" }
+      },
+      "ignoredevices": {
+        "title": "Ignore Devices",
+        "type": "array",
+        "items": { "title": "Device ID", "type": "integer" }
+      },
+      "ignorescenes": {
+        "title": "Ignore Scenes",
+        "type": "array",
+        "items": { "title": "Scene ID", "type": "integer" }
+      },
+      "ignoreplugins": {
+        "title": "Ignore Plugins",
+        "type": "array",
+        "items": {
+          "title": "Plugin name / device type substring",
+          "type": "string"
+        },
+        "description": "Skip devices whose device type or altid contains any of these strings (e.g. Nest, PhilipsHue, Wemo)."
+      },
+      "garageLocks": {
+        "title": "Garage Locks",
+        "type": "array",
+        "items": { "title": "Device ID", "type": "integer" },
+        "description": "Lock device IDs that should be presented as garage doors in HomeKit."
+      }
+    }
+  }
+}
